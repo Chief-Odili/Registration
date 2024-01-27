@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body >
+    <h1 class="top">Sign-up For full Access!</h1>
+    
+    <div class="platform">
+        
+        <div class="right">
+            <img class="vector" src="images/type.svg" alt="Sign-up">
+
+
+        </div>
+        <div class="left">
+            <form  action="">
+                <h3>Kindly enter your details to sign-up</h3>
+                <label for="first-name">Full Name</label> <br>
+                <input type="text" id="full-name" min="3" placeholder="first-name" required>
+
+                <br>
+
+                <label for="email">Email</label><br>
+                <input type="email" id="email" placeholder="example@gmail.com" required>
+
+                <br>
+                <label for="phone-number">Phone Number</label><br>
+                <input type="number" min="11" max="13" id="call" pattern="[234][0-9]{9}" placeholder="+234********" onkeyup="numCheck" required>
+                <br>
+                <span id="num-msg" class="error-msg"></span>
+
+                <br>
+
+                <label for="password">Password</label><br>
+                <input type="password" id="password" placeholder="XXXXXXXX" required><br>
+
+                <label for="confirm-password">Confirm Password</label><br>
+                <input type="password" id="confirm-password" placeholder="XXXXXXXX" onkeyup="checkPassword()" required>
+                <br><span id="msg" class="error-msg"></span>
+                <small class="legal">
+                    By signing up, you are agreeing to our <br>
+                    <a href="#">Terms & Conditions</a>
+                 </small>
+                 <br>
+                <button class="send">Create Account</button>
+
+            </form>
+
+        </div>
+    </div>    
+</body>
+</html>
