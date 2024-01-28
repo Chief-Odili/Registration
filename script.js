@@ -1,23 +1,28 @@
-function numCheck(){
-    var num = document.getElementById('call');
-    var valid = num.checkValidity();
-    if(valid){
-        document.getElementById('num-msg').innerHTML = " ";
-    }
-    else{
-        document.getElementById('num-msg').innerHTML = "Invalid Phone Number!"
-    }
-}
 
 function checkPassword(){
-    var pass = document.getElementById('password');
-    var cpass = document.getElementById('confirm-password');
-    if(pass != cpass){
-        document.getElementById('msg').innerHTML = "Password do not match";
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirm-password').value;
+    var message = document.getElementById('msg');
+    if(password === confirmPassword){
+        message.textContent = " ";
     }
     else{
-        document.getElementById('msg').innerHTML = " ";
+        message.textContent = "Password do not match"
     }
 
-
 }
+
+function numCheck() {
+    var phoneNumber = document.getElementById('call').value;
+    var numMessage = document.getElementById('num-msg');
+
+    // Validate the phone number format
+    var phoneNumberPattern = /^\+234[0-9]{9}$/; // Assumes the format +234*********
+
+    if (phoneNumberPattern.test(phoneNumber)) {
+        numMessage.textContent = '';
+    } else {
+        numMessage.textContent = 'Invalid phone number format';
+    }
+}
+

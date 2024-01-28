@@ -30,7 +30,7 @@
 
                 <br>
                 <label for="phone-number">Phone Number</label><br>
-                <input type="number" min="11" max="13" id="call" pattern="[234][0-9]{9}" placeholder="+234********" onkeyup="numCheck" required>
+                <input type="tel" min="11"  id="call" pattern="[234][0-9]{9}" placeholder="+234********" onkeyup="numCheck" required>
                 <br>
                 <span id="num-msg" class="error-msg"></span>
 
@@ -41,7 +41,7 @@
 
                 <label for="confirm-password">Confirm Password</label><br>
                 <input type="password" id="confirm-password" placeholder="XXXXXXXX" onkeyup="checkPassword()" required>
-                <br><span id="msg" class="error-msg"></span>
+                <br><span id="msg" class="error-msg"></span><br>
                 <small class="legal">
                     By signing up, you are agreeing to our <br>
                     <a href="#">Terms & Conditions</a>
