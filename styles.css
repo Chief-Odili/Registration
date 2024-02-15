@@ -83,3 +83,19 @@ input:focus{
 .send:hover{
     background-color: #b2cbf1;
 }
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .platform {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+    .platform {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
